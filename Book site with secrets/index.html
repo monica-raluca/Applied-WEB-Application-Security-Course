@@ -1,0 +1,68 @@
+<html>  
+<head>  
+    <title>PHP login system</title>  
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+
+<body class="main_body"> 
+    
+    <header>
+        <h2 class="logo"><ion-icon name="heart"></ion-icon></h2>
+        <h2 class="banner">~ Happiness can be found, even in the darkest of times, if one only remembers to turn on the light! ~</h2>
+        <nav class="navigation">
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+     
+    <div class="wrapper">  
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>  
+            <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <div class="input-box">
+                <span class="icon">
+                   <ion-icon name="person"></ion-icon> 
+                </span>
+                    <input type = "text" name  = "user" required> 
+                    <label>Username</label>   
+            </div>
+            <div class="input-box">  
+                <span class="icon">
+                  <ion-icon name="lock-closed"></ion-icon>  
+                </span>
+                    <input type = "password" name  = "pass" required>
+                    <label>Password</label>  
+            </div>
+                <button type =  "submit" class = "btn">Login</button>
+            </form>  
+            
+        </div>
+    </div>  
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+    </script> 
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>     
+</html>  

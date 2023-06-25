@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #270023;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    pointer-events: none;
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.logo.clickable {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+body.page_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('fantasy.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navigation .btn {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+    display: none;
+}
+
+.navigation .btn:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.banner {
+    font-size: 1em;
+    color: #fff;
+    user-select: none;
+    align-items: center;
+    padding: 5px 15px;
+    margin-left: 50px;
+}
+
+.secret {
+   transform: scale(0);
+} 
+
+.secret.show { 
+    transform: scale(1);
+}
+
